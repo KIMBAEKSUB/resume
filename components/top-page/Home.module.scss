@@ -1,0 +1,59 @@
+@import '/styles/common-style.scss';
+
+
+.languageContainer {
+  position: absolute;
+  top: -7rem;
+  left: -0.25rem;
+  display: flex;
+}
+
+.language {
+  font-size: 3rem;
+  padding: 1rem; 
+  color: #6372a75f;
+}
+
+.navigationContainer {
+  border-bottom: 1px solid map-get($app-colors, primary-300);
+}
+
+.wave1 {
+  position: absolute;
+  right: -40rem;
+  overflow: hidden;
+  height: 100vh;
+
+  @media (max-width: $tablet-width) {
+    bottom: -15rem;
+    right: -45rem;
+  }
+}
+
+.wave2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+}
+
+.wave3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1rem;
+  width: 100vw;
+}
+
+.subtitle {
+  line-height: 1.75rem;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.blinkingText {
+  animation: blink 0.85s step-end infinite;
+}

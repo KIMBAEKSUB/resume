@@ -1,0 +1,40 @@
+$mobile-width: 480px;
+$tablet-width: 768px;
+$pc-width: 1024px;
+
+$app-colors: (
+    primary-100: #f7f9fc,
+    primary-200: #e3eaf6,
+    primary-300: #d0dbf0,
+    primary-400: #bdccea,
+    primary-500: #a9bde4,
+    primary-600: #96afdd,
+    primary-700: #83a0d7,
+    primary-800: #6f92d1,
+    primary-900: #5c83ca,
+    accent-50: #ffe8ee,
+    accent-100: #ffcedb,
+    accent-200: #ffadc3,
+    accent-300: #ffa9c0,
+    accent-400: #ff8fad,
+    accent-500: #ff769b,
+    accent-600: #ff5c88,
+    accent-700: #ff4375,
+    accent-800: #ff2963,
+    accent-900: #ff1050,
+    blue-500: #4f65f1,
+    dark-blue-100: #a1a5be,
+    dark-blue-200: #7d88b1,
+    dark-blue-300: #6372a7,
+    dark-blue-400: #364c6f,
+    dark-blue-500: #242a55,
+    dark-blue-600: #21232e,
+    purple-500: #5a50eb,
+);
+
+
+$app-borders: (
+    app-border-default: 1px solid map-get($app-colors, primary-300),
+    app-border-input: 1px solid map-get($app-colors, primary-300),
+    app-border-input-focus: map-get($app-colors, blue-500),
+);
