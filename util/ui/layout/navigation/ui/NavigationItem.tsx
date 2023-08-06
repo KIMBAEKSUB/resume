@@ -1,9 +1,9 @@
-import { NavigationItemProps } from "@/util/const/interface/UiInterface";
+import { NavigationItemProps } from "@/util/const/interface/ui";
 
 const NavigationItem: React.FC<NavigationItemProps> = ({ text, className, href, target }) => {
 
     return (
-        <a className={`navbar-item ${className}`} target={target ?? '_blank'} href={href}>
+        <a className={`navbar-item mx-2 ${className}`} target={target ?? '_self'} href={href}>
             {text}
         </a>
     );

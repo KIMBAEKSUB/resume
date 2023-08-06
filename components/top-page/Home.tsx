@@ -1,36 +1,29 @@
-import AppNavigation from '@/util/ui/layout/navigation/AppNavigation'
 import classes from './Home.module.scss'
-
 import HomeWave from './HomeWave';
-import HomeLanguages from './HomeLanguages';
-import AppNavigationFooter from '@/util/ui/layout/navigation/AppNavigationFooter';
-import HomeTitle from './HomeTitle';
+import HomeNavigation from './HomeNavigation';
+import HomeFooter from './HomeFooter';
+import HomeBody from './HomeBody';
 
-export default function Home() {
+
+const Home = () => {
 
     return (
-        <section className="hero is-large is-fullheight has-background-info-light" style={{position: "relative", overflow: "hidden"}}>
+        <section className={`hero is-large is-fullheight has-background-info-light ${classes.homeContainer}`}>
+
+            {/* A top page's wave icons */}
             <HomeWave />
-            <div className={'hero-head has-background-white-bis ' + classes.navigationContainer}>
-                <AppNavigation />
-            </div>
-            <div className="hero-body">
-                <div className='container'>
-                    <HomeLanguages />
-                    <HomeTitle />
-                    <p className={"subtitle " + classes.subtitle}>
-                        Exploring the World of Coding, Problem-Solving, and Innovation. <br />
-                        Here, I Showcase My Journey as a Skilled Software Engineer, <br />
-                        and I&apos;m Excited to Share My Passion for Creating Clean, Efficient,  <br />
-                        and Scalable Solutions That Power the Future of Technology.
-                    </p>
-                    <button className="button is-info is-rounded mr-5">View Project History</button>
-                    <button className="button is-ghost">Send E-mail</button>
-                </div>
-            </div>
-            <div className="hero-foot">
-                <AppNavigationFooter />
-            </div>
+
+            {/* A top page's navigation */}
+            <HomeNavigation />
+
+            {/* A top page's body */}
+            <HomeBody />
+
+            {/* A top page's footer */}
+            <HomeFooter />
+
         </section>
     )
 }
+
+export default Home;

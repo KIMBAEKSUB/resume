@@ -1,5 +1,9 @@
 @import '/styles/common-style.scss';
 
+.homeContainer {
+  position: relative;
+  overflow: hidden;
+}
 
 .languageContainer {
   position: absolute;

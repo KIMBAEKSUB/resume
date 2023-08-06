@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "@sendgrid/mail": "^7.7.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
     "bulma": "^0.9.4",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",

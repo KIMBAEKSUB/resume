@@ -5,11 +5,15 @@ const NavigationDropdownItem: React.FC = () => {
     return (<>
         <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">
-                Portpolio
+                About
             </a>
 
             <div className="navbar-dropdown">
-                <NavigationItem text="Kolea" />
+                <NavigationItem text="About me" />
+                <hr className="navbar-divider" />
+                <NavigationItem text="Project" />
+                <NavigationItem text="Blog" />
+                <NavigationItem text="Resume" />
             </div>
         </div>
     </>);

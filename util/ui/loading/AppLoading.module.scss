@@ -1,0 +1,25 @@
+.loading {
+    animation: rotate_image 1.7s linear infinite;
+}
+
+.loading__wrap {
+    width: inherit;
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading__overplay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    z-index: 1000;
+}
+
+@keyframes rotate_image {
+    100% {
+        transform: rotate(360deg);
+    }
+}
