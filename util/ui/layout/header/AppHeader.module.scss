@@ -2,4 +2,8 @@
 
 .headerContainer {
     border-bottom: 1px solid map-get($app-colors, primary-300);
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }

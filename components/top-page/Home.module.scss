@@ -19,6 +19,7 @@
 }
 
 .navigationContainer {
+  z-index: 1000;
   border-bottom: 1px solid map-get($app-colors, primary-300);
 }
 

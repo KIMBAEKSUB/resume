@@ -14,9 +14,11 @@ export interface AppInputProps {
     type?: string;
     icon?: React.ReactNode;
     validation?: { type: validationType, option?: validationOption, showError?: boolean, showSuccess?: boolean};
+    autofocus?: boolean;
+    className?: string;
 }
 
-const AppInput: React.FC<AppInputProps> = ({ label, placeholder, value, onChange, type, icon, validation }) => {
+const AppInput: React.FC<AppInputProps> = ({ label, placeholder, value, onChange, type, icon, validation, autofocus, className }) => {
     
     const [isTouched, setIsTouched] = useState<boolean>(false);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -71,7 +73,8 @@ const AppInput: React.FC<AppInputProps> = ({ label, placeholder, value, onChange
             <div className="control has-icons-left has-icons-right">
                 <input 
                     className={
-                        `input 
+                        `input
+                        ${className ?? ''}
                         ${validation?.showError && errorMessage && 'is-danger'} 
                         ${validation?.showSuccess &&  successMessage && 'is-success'}`
                     } 
@@ -80,6 +83,7 @@ const AppInput: React.FC<AppInputProps> = ({ label, placeholder, value, onChange
                     value={value}
                     onChange={(event) => setInputValue(event.target.value)} 
                     onBlur={() => setIsTouched(true)}
+                    autoFocus={autofocus}
                 />
                 {icon && <span className="icon is-small is-left">{icon}</span>}
                 {successMessage && <span className="icon is-size-5 is-right" style={{height: '-webkit-fill-available'}}><BsCheck /></span>}

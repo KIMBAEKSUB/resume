@@ -1,0 +1,12 @@
+@import "/styles/common-style.scss";
+
+.itemContainer {
+    max-height: 25rem;
+    overflow: auto;
+
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

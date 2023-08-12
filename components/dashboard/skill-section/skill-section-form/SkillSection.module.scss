@@ -1,0 +1,18 @@
+@import '/styles/common-style.scss';
+
+.formContainer {
+    @media (max-width: $mobile-width) {
+        flex-direction: column;
+    }
+
+    * {
+        background: none !important;
+    }
+}
+
+.inputContainer {
+    @media (max-width: $mobile-width) {
+        margin-right: 0 !important;
+        margin-top: 1rem;
+    }
+}

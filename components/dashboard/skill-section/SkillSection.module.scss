@@ -1,0 +1,13 @@
+@import "/styles/common-style.scss";
+
+.sectionContainer {
+
+}
+
+.boxContainer {
+    padding: 3rem;
+    margin-top: 2rem;
+    @media (max-width: $mobile-width) {
+        padding: 1rem;
+    }
+}

@@ -3,11 +3,14 @@ import HomeLanguages from './HomeLanguages';
 import { useState } from 'react';
 import HomeTitle from './HomeTitle';
 import AppContactModal from '@/util/ui/modal/ContactModal/AppContactModal';
+import { PATH } from '@/util/const/common/path';
+import { useRouter } from 'next/router';
 
 
 const HomeBody = () => {
     
     const [showContactModal, setShowContactModal] = useState(false);
+    const route = useRouter();
 
     return (
         <div className="hero-body">
@@ -20,7 +23,7 @@ const HomeBody = () => {
                     and I&apos;m Excited to Share My Passion for Creating Clean, Efficient,  <br />
                     and Scalable Solutions That Power the Future of Technology.
                 </p>
-                <button className="button is-info is-rounded mr-5">View Project History</button>
+                <button className="button is-info is-rounded mr-5" onClick={() => route.push(PATH.DASHBOARD)}>Go to Overview</button>
                 <button className="button is-ghost" onClick={() => setShowContactModal(true)}>Send E-mail</button>
             </div>
             <AppContactModal isActive={showContactModal} onClose={() => setShowContactModal(false)}/>
