@@ -2,7 +2,7 @@ import AppLayout from '@/util/ui/layout/AppLayout'
 import 'bulma/css/bulma.min.css'
 import type { AppProps } from 'next/app'
 
-export const withoutLayoutPages = ["HomePage"];
+export const withoutLayoutPages = ["HomePage", "DashboardPage"];
 
 export default function App({ Component, pageProps }: AppProps) {
 

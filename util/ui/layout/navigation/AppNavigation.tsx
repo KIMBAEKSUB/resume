@@ -13,7 +13,7 @@ const AppNavigation: React.FC = () => {
         setIsActive((currentValue) => currentValue === "is-active" ? "" : "is-active")
     }
 
-    return <nav className="navbar container" role="navigation" aria-label="main navigation">
+    return <nav className="navbar container" role="navigation" aria-label="main navigation" style={{ background: "none" }}>
         <div className="navbar-brand">
             <NavigationLogo />
             <NavigationMobileMenuButton isActive={isActive} onClick={activeHandler} />
@@ -22,7 +22,7 @@ const AppNavigation: React.FC = () => {
         <div className={`navbar-menu ${isActive}`}>
             <div className="navbar-end">
                 <NavigationItem href={PATH.DASHBOARD} text="Dashboard" className="has-text-weight-medium" />
-                <NavigationItem text="Projects" />
+                <NavigationItem href={PATH.PROJECTS}  text="Projects" />
                 <NavigationDropdownItem />
             </div>
         </div>

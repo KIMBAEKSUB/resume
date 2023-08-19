@@ -1,5 +1,4 @@
 import classes from './Home.module.scss'
-import HomeLanguages from './HomeLanguages';
 import { useState } from 'react';
 import HomeTitle from './HomeTitle';
 import AppContactModal from '@/util/ui/modal/ContactModal/AppContactModal';
@@ -14,10 +13,9 @@ const HomeBody = () => {
 
     return (
         <div className="hero-body">
-            <div className='container'>
-                <HomeLanguages />
+            <div className={'container ' + classes.bodyContainer} >
                 <HomeTitle />
-                <p className={`subtitle ${classes.subtitle}`}>
+                <p className={`subtitle is-4 ${classes.subtitle}`}>
                     Exploring the World of Coding, Problem-Solving, and Innovation. <br />
                     Here, I Showcase My Journey as a Skilled Software Engineer, <br />
                     and I&apos;m Excited to Share My Passion for Creating Clean, Efficient,  <br />

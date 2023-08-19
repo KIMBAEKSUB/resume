@@ -11,9 +11,10 @@ const NavigationDropdownItem: React.FC = () => {
             <div className="navbar-dropdown">
                 <NavigationItem text="About me" />
                 <hr className="navbar-divider" />
+                <NavigationItem text="Project List" />
                 <NavigationItem text="Qualifications" />
                 <NavigationItem text="Work Experience" />
-                <NavigationItem text="Resume Dawnload" />
+                <NavigationItem text="Resume Download" />
                 <hr className="navbar-divider" />
                 <NavigationItem text="Portfolios" />
                 <NavigationItem text="Blog" />

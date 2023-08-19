@@ -1,7 +1,10 @@
 @import "/styles/common-style.scss";
 
 .sectionContainer {
-
+    padding-top: 5rem;
+    @media (max-width: $mobile-width) {
+        padding-top: 3rem;
+    }
 }
 
 .boxContainer {

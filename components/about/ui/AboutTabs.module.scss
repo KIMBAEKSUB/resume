@@ -1,0 +1,27 @@
+@import "/styles/common-style.scss";
+
+.tabContainer {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 3.3rem;
+    border-bottom: 1px solid #dbdbdb;
+    z-index: 100;
+}
+.tab {
+    border: none;
+}
+.tabInnerContainer {
+    border: none !important;
+}
+.tabItem {
+    border: none !important;
+}
+.isActive {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgb(67, 81, 232);
+    background: rgba(67, 81, 232, 0.1);
+    border-top-color: rgb(67, 81, 232);
+    border-right-color: rgb(67, 81, 232);
+    border-left-color: rgb(67, 81, 232);
+}

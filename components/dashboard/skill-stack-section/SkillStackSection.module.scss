@@ -1,0 +1,29 @@
+@import "/styles/common-style.scss";
+
+.frontEnd {
+    transition: 0.1s all ease-in;
+    &:hover {
+        background-color: antiquewhite;
+    }
+}
+
+.backEnd {
+    transition: 0.1s all ease-in;
+    &:hover {
+        background-color:#e3ffd8;
+    }
+}
+
+.database {
+    transition: 0.1s all ease-in;
+    &:hover {
+        background-color: rgb(231, 215, 250);
+    }
+}
+
+.service {
+    transition: 0.1s all ease-in;
+    &:hover {
+        background-color: rgb(215, 239, 250);
+    }
+}

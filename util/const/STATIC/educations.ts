@@ -1,7 +1,7 @@
 const educations = [
     {
         title: "Docker & Kubernetes: The Practical Guide",
-        targers: ["Docker", "Kubernetes"],
+        targets: ["Docker", "Kubernetes"],
         trainingHours: 23.5,
         trainersName: "Maximilian Schwarzmüller",
         category: "Docker",
@@ -9,7 +9,7 @@ const educations = [
     },
     {
         title: "Ultimate AWS Certified Cloud Practitioner",
-        targers: ["AWS"],
+        targets: ["AWS"],
         trainingHours: 15,
         trainersName: "Stephane Maarek",
         category: "AWS",
@@ -17,7 +17,7 @@ const educations = [
     },
     {
         title: "Ultimate AWS Certified Solutions Architect Associate SAA-C03",
-        targers: ["AWS"],
+        targets: ["AWS"],
         trainingHours: 27,
         trainersName: "Stephane Maarek",
         category: "AWS",
@@ -25,7 +25,7 @@ const educations = [
     },
     {
         title: "Ultimate AWS Certified Developer Associate 2023 NEW DVA-C02",
-        targers: ["AWS"],
+        targets: ["AWS"],
         trainingHours: 33,
         trainersName: "Stephane Maarek",
         category: "AWS",

@@ -1,18 +1,26 @@
-import { SetStateAction, useCallback, useState } from "react";
-import SkillSectionForm from "./skill-section-form/SkillSectionForm"
-import SkillSectionList from "./skill-section-list/SkillSectionList";
-import ImportedSkills from "@/util/const/TEMP_CONTEANT/skills";
+import { SetStateAction, useCallback, useEffect, useState } from "react";
+import ImportedSkills from "@/util/const/STATIC/skills";
 import { KeywordList, SkillSectionListItem } from "@/util/const/interface/dashboard";
-import DashboardTitle from "../ui/DashboardTitle";
-import { PATH } from "@/util/const/common/path";
 import classes from "./SkillSection.module.scss";
-
+import useWindowSize from "@/util/hooks/use-window-size";
+import StillSectionFormPC from "./skill-section-form-pc/SkillSectionFormPC";
+import SkillSectionList from "./skill-section-list/SkillSectionList";
 
 const SkillSection = () => {
 
     const [skills, setSkills] = useState<Array<SkillSectionListItem>>(ImportedSkills);
+    const { isMobile } = useWindowSize();
+    const [styles, setStyles] = useState({ title: "is-1" });
 
-    const onChangeContionHandler = useCallback((keywords: KeywordList[]) => {
+    useEffect(() => {
+        if (isMobile) {
+            setStyles({ title: "is-2" });
+        } else {
+            setStyles({ title: "is-1" });
+        }
+    }, [isMobile]);
+
+    const onChangeConditionHandler = useCallback((keywords: KeywordList[]) => {
         if (keywords.length === 0) {
             setSkills(ImportedSkills);
             return;
@@ -48,24 +56,13 @@ const SkillSection = () => {
         setSkills(filteredSkills);
     }, []);
 
-    return <section className="section" style={{ paddingTop: "5em" }}>
-        <h1 className="title is-1">
-            <span>
-                Overview
-            </span>
-            {/* <a className="button is-ghost p-1 mx-2 has-text-weight-normal" style={{ height: "auto" }} href={""} target="_self">more</a> */}
-        </h1>
-        <h2 className="subtitle is-4"><strong className="has-text-danger">{ImportedSkills.length} Task</strong> involvements.</h2>
-            <SkillSectionForm onChange={onChangeContionHandler} />
-
-        <div className={"box " + classes.boxContainer}>
-
-        </div>
-<div className={"box " + classes.boxContainer}>
-
-        </div>
-        <div className={"box " + classes.boxContainer}>
+    return <section className={"section " + classes.sectionContainer}>
+        <h1 className={"title " + styles.title}>Overview</h1>
+        <h2 className="subtitle is-4">Please look around to see what I can do for you.</h2>
+        <div className="box">
+            <StillSectionFormPC onChange={onChangeConditionHandler} />
             <SkillSectionList items={skills} />
+
         </div>
     </section>
 }

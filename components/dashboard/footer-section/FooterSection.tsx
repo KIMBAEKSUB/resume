@@ -16,7 +16,7 @@ const FooterSection = () => {
         <>
             <section className="section">
                 <h3 className="subtitle has-text-centered has-text-primary is-uppercase is-size-6 has-text-weight-semibold my-6">feel free to contact me</h3>
-                <h1 className="title is-spaced has-text-centered">Building Better Software, Together.</h1>
+                <h1 className="title is-2 is-spaced has-text-centered">Building Better Software, Together.</h1>
                 <div className="columns">
                     <div className="column is-8 is-offset-2">
                         <ContactModalEmailInput onChange={(v: string) => setEmailAddress(v)} />

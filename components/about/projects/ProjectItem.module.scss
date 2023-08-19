@@ -1,0 +1,29 @@
+@import "/styles/common-style.scss";
+
+.positionContainer {
+    display: flex;
+    justify-content: space-around;
+
+    height: 100%;
+
+    @media (max-width: $mobile-width) {
+        display: block;
+    }
+}
+
+.positionInnerContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.position {
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.checkIcon {
+    font-size: 1.25rem;
+    margin-right:0.75rem;
+    color: #0FE0B6;
+}

@@ -4,7 +4,7 @@ const skills = [
         languages: ["PHP", "Javascript", "Css", "Html", "PostgreSql", "JAVA"],
         frameworks: [ "Laravel", "Vue", "Spring" ],
         tools: ["AWS"],
-        roles: ["Requirement Definition", "Basic Design", "Detailed Design", "Development", "Integration Test", "System Test", "Operation"]
+        roles: ["Definition", "Design", "Development", "System Test", "Operation"]
     },
     {
         project: "Development Service",
