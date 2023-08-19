@@ -23,7 +23,7 @@ export const sendEmail = async (subject: string, text: string, email: string) =>
         return;
     }
 
-    sgMail.setApiKey("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");
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
     const msg = {
         to: email, 
         from: "kbsub2002@gmail.com",
