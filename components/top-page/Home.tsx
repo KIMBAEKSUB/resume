@@ -2,14 +2,12 @@ import classes from './Home.module.scss'
 import HomeWave from './HomeWave';
 import HomeNavigation from './HomeNavigation';
 import HomeBody from './HomeBody';
+import Dashboard from '../dashboard/Dashboard';
 
 const Home = () => {
 
     return (<>
-        <section className={`hero is-fullheight has-background-info-light ${classes.homeContainer}`}>
-
-            {/* A top page's wave icons */}
-            <HomeWave />
+        <section className={`hero ${classes.homeContainer}`}>
 
             {/* A top page's navigation */}
             <HomeNavigation />
@@ -18,6 +16,7 @@ const Home = () => {
             <HomeBody />
 
         </section>
+            <Dashboard />
     </>)
 }
 

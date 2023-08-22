@@ -57,7 +57,7 @@ const SkillSection = () => {
     }, []);
 
     return <section className={"section " + classes.sectionContainer}>
-        <h1 className={"title " + styles.title}>Overview</h1>
+        <h1 className={"title " + styles.title}>Projects</h1>
         <h2 className="subtitle is-4">Please look around to see what I can do for you.</h2>
         <div className="box">
             <StillSectionFormPC onChange={onChangeConditionHandler} />

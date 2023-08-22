@@ -13,7 +13,7 @@ const Dashboard = () => {
             <main className="container">
 
                 {/* navigation for the dashboard. */}
-                <AppNavigation />
+                {/* <AppNavigation /> */}
 
                 {/* skills overview. full screen */}
                 <SkillSection />
